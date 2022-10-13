@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <style>
+      /* .container{
+            height: 100vh;
+            background-color: orange;
+        } */
+    </style>
+  </head>
+  <body>
+    <h1 class="bg-info text-white p-4">CRUD</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4 class="mb-2">Student Form</h4>
+          <form id="studentForm">
+            <div class="form-group">
+              <label for="fName">
+                <strong> First Name* </strong>
+              </label>
+              <input
+                type="text"
+                value=""
+                class="form-control"
+                id="fName"
+                pattern="^([A-Za-z])+$"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="lName">
+                <strong> Last Name* </strong>
+              </label>
+              <input
+                type="text"
+                value=""
+                id="lName"
+                class="form-control"
+                pattern="^([A-Za-z])+$"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">
+                <strong> Email* </strong>
+              </label>
+              <input
+                type="text"
+                value=""
+                id="email"
+                class="form-control"
+                pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="contact">
+                <strong> Contact* </strong>
+              </label>
+              <input
+                type="text"
+                value=""
+                id="contact"
+                class="form-control"
+                maxlength="10"
+                pattern="^([0-9]{10,10})+$"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="submit"
+                value="Submit"
+                id="submitBtn"
+                class="btn btn-primary"
+              />
+              <input
+                type="button"
+                value="Update"
+                id="updateBtn"
+                class="btn btn-primary d-none"
+              />
+              <!-- <button type="submit" class="btn btn-info" >Submit</button> -->
+            </div>
+          </form>
+        </div>
+        <div class="col-md-8">
+          <h4 class="mb-4">Student Info</h4>
+          <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>Sr. No</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody id="stdInfo"></tbody>
+          </table>
+        </div>
+      </div>
+      <hr>
+   
+    </div>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

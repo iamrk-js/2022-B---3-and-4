@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOF</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .jump{
+            color: #fff;
+            font-size: 68px;
+            text-transform: uppercase;
+        }
+        .jump span{
+            display: inline-block;
+            transition: all .4s ease-in-out;
+            margin-right: 2px;
+            cursor: pointer;
+        }
+        .jump span:hover {
+            transform:  translateY(-20px) rotate(10deg) scale(2);
+        }
+    </style>
+</head>
+<body>
+        <h1 id="jump" class="jump">spread!</h1>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
